@@ -7,8 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button color="primary" block (click)="activar()">Activar</button>
+  <button ion-button color="danger" block (click)="desactivar()">Desactivar</button>
+
+  <ion-card *ngIf="data">
+    <ion-card-content>
+      <h2>X: {{data.x | number:'1.4-4'}}</h2>
+      <h2>Y: {{data.y | number:'1.4-4'}}</h2>
+      <h2>Z: {{data.z | number:'1.4-4'}}</h2>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
